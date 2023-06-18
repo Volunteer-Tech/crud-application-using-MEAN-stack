@@ -1,6 +1,6 @@
-# MEAN-Stack-CRUD
-> An Angular + Node/Express + MongoDB + Bootstrap Simple example 
-This code will add, upadate and delete data to mongodb using express rest APIS and frontend through Angular 7. Angular Code is in main directory and backend code is in backend directory of main directory
+# MEAN-Stack Simple CRUD Application -  Angular + Node/Express + MongoDB + Bootstrap 
+
+> This code will add, upadate and delete data to mongodb using express rest APIS and frontend through Angular 7. Angular Code is in main directory and backend code is in backend directory of main directory
 
 ### Prerequisites
 Below listed things you need to have in your system to run this code
