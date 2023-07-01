@@ -2,6 +2,9 @@ var express = require('express'),
 path = require('path'),
 bodyParser = require('body-parser'),
 cors = require('cors'),
+mongoose = require('mongoose')
+require('dotenv').config()
+
 mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true }).then(
