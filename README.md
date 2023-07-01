@@ -10,6 +10,7 @@ Below listed things you need to have in your system to run this code
 - NPM
 - Angular CLI 
 - MongoDB
+- Use nvm install 8 & nvm use 8
 ```
 
 ### To Setup
@@ -32,6 +33,7 @@ to run node server
 to run angular frontend
 1. `cd MEAN-Stack`
 2. `ng serve -o`
+3. `docker-compose --env-file ./backend/.env up`
 
 ### To add user
 http://localhost:4200/user/create
