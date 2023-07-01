@@ -15,9 +15,15 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
-      - name: Build Docker Image
+      - name: Build Frontend Docker Image
         run: docker build -t "${DOCKERHUB_USERNAME}"/crud-frontend:${{ github.run_number }} -f Dockerfile.frontend .
+      - name: Build Backend Docker Image
+        run: |
+          cd backend
+          docker build -t "${DOCKERHUB_USERNAME}"/crud-backend:${{ github.run_number }} -f Dockerfile.backend .  
       - name: Login to DockerHub
         run: echo "${DOCKERHUB_TOKEN}" | docker login -u "${DOCKERHUB_USERNAME}" --password-stdin
-      - name: Push Docker Image to DockerHub
+      - name: Push Frontend Docker Image to DockerHub
         run: docker push "${DOCKERHUB_USERNAME}"/crud-frontend:${{ github.run_number }}
+      - name: Push Backend Docker Image to DockerHub
+        run: docker push "${DOCKERHUB_USERNAME}"/crud-backend:${{ github.run_number }} 
